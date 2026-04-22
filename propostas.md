@@ -12,11 +12,11 @@ Solucionar a falta de clientes novos, mostrar a eles o porque devem escolher os 
 Pessoas que estão à procura de serviços de mecânica em relação a caminhões e tratores.
 
 ### Funcionalidades
- -Exibir informações dos serviços prestados pela empresa da forma mais organizada e intuitiva possível;
- -Conter botões para acessar novas guias com mais algumas informações específicas dos serviços prestados;
- -Exibir imagens e vídeos dos serviços prestados;
- -Exibir imagens e vídeos do local de trabalho;
- -Exibir informações da empresa.  
+-Exibir informações dos serviços prestados pela empresa da forma mais organizada e intuitiva possível;
+-Conter botões para acessar novas guias com mais algumas informações específicas dos serviços prestados;
+-Exibir imagens e vídeos dos serviços prestados;
+-Exibir imagens e vídeos do local de trabalho;
+-Exibir informações da empresa.  
 
 ---
 
@@ -42,12 +42,18 @@ Crianças de até 12 anos.
 
 # Proposta 03
 
-## Título_da_proposta
+## Página De Artes
 
 ### Descrição
+Um site focado no bate papo, socialização e divulgação de artes pessoais.
 
 ### Problema a ser solucionado
+Desvalorização de artistas: muitos artistas não têm apoio para seguir carreira e quase nunca são valorizados, ou recebem de maneira correta pelos seus trabalhos.
 
 ### Público alvo
+Artistas que buscam divulgar suas artes, e pessoas interessadas, possivelmente jovens.
 
 ### Funcionalidades
+-Exibir imagens das artes divulgadas
+-Exibir informações dos artistas (contato e outras redes sociais) 
+-Compartilhamento de ideias
