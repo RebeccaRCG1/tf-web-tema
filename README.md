@@ -59,8 +59,8 @@ para um único administrador. Como não há múltiplos usuários publicando cont
 
 ## Diagrama Mermaid
 
-    mermaiderDiagram
-
+```mermaid
+erDiagram
     ADMIN {
         Int id PK
         String nome
@@ -85,6 +85,7 @@ para um único administrador. Como não há múltiplos usuários publicando cont
     }
 
     CATEGORIA ||--o{ DESENHO : "possui"
+```
 
 ## Banco de Dados Populado (Prisma Studio)
 
