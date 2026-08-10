@@ -1,0 +1,37 @@
+// Datasource — conexão com o banco PostgreSQL no Neon
+datasource db {
+  provider = "postgresql"           // tipo de banco
+}
+
+// Generator — gera o Prisma Client em JavaScript
+generator client {
+  provider = "prisma-client-js"
+}
+
+// Model Categoria — representa a tabela "Categoria" no banco
+model Categoria {
+  id          Int       @id @default(autoincrement())  // PK, gerado automaticamente
+  nome        String                                    // obrigatório — nome da categoria (ex: "Fantasia", "Retrato")
+  descricao   String                                    // obrigatório — explica o que pertence a essa categoria
+  desenhos    Desenho[]                                 // relação 1:N — uma categoria tem muitos desenhos
+}
+
+// Model Desenho — representa a tabela "Desenho" no banco
+model Desenho {
+  id           Int       @id @default(autoincrement())          // PK, gerado automaticamente
+  texto        String?                                          // opcional — nem todo desenho tem uma explicação escrita
+  fotoUrl      String                                            // obrigatório — URL do desenho (serviço de upload de imagens)
+  categoriaId  Int                                                // FK escalar — guarda o id da categoria
+  categoria    Categoria @relation(fields: [categoriaId], references: [id]) // relação N:1 — cada desenho pertence a uma única categoria
+  criadoEm     DateTime  @default(now())                         // data de postagem do desenho
+  atualizadoEm DateTime  @updatedAt                               // atualizado automaticamente quando o desenho é editado
+}
+
+// Model Admin — representa a tabela "Admin" no banco (usuário responsável pela curadoria)
+model Admin {
+  id        Int     @id @default(autoincrement())  // PK, gerado automaticamente
+  nome      String                                   // obrigatório
+  email     String  @unique                          // obrigatório e único — usado para login
+  senhaHash String                                   // hash da senha (nunca retornado pela API)
+  fotoUrl   String?                                  // opcional — nem todo admin cadastra uma foto de perfil
+}
