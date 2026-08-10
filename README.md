@@ -57,6 +57,36 @@ Desenho possui categoria (1,n) — (1,n): um desenho pode estar associado a uma 
 Observação sobre user admin: essa entidade não possui relacionamento com desenho ou categoria no modelo porque o sistema foi pensado
 para um único administrador. Como não há múltiplos usuários publicando conteúdo, não existe a necessidade de registrar "quem criou o quê",todo o conteudo pertence ao único administrador existente.
 
+## Diagrama Mermaid
+
+​```mermaiderDiagram
+
+    ADMIN {
+        Int id PK
+        String nome
+        String email UK
+        String senhaHash
+        String fotoUrl "opcional"
+    }
+
+    DESENHO {
+        Int id PK
+        String texto "opcional"
+        String fotoUrl
+        Int categoriaId FK
+        DateTime criadoEm
+        DateTime atualizadoEm
+    }
+
+    CATEGORIA {
+        Int id PK
+        String nome
+        String descricao
+    }
+
+    CATEGORIA ||--o{ DESENHO : "possui"
+​```
+
 
 
 
