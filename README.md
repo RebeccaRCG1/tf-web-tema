@@ -97,6 +97,14 @@ para um único administrador. Como não há múltiplos usuários publicando cont
 ### Desenho
 ![Tabela Desenho](db/Tabela-Desenho.png)
 
+## Arquivos Técnicos
+
+[`schema.prisma`](prisma/schema.prisma)
+
+[`migrations/`](prisma/migrations/)
+
+[`seed.js`](prisma/seed.js)
+
 
 
 
