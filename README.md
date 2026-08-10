@@ -59,7 +59,7 @@ para um único administrador. Como não há múltiplos usuários publicando cont
 
 ## Diagrama Mermaid
 
-​```mermaiderDiagram
+    mermaiderDiagram
 
     ADMIN {
         Int id PK
@@ -85,7 +85,17 @@ para um único administrador. Como não há múltiplos usuários publicando cont
     }
 
     CATEGORIA ||--o{ DESENHO : "possui"
-​```
+
+## Banco de Dados Populado (Prisma Studio)
+
+### Admin
+![Tabela Admin](db/Tabela-ADM.png)
+
+### Categoria
+![Tabela Categoria](db/Tabela-Categoria.png)
+
+### Desenho
+![Tabela Desenho](db/Tabela-Desenho.png)
 
 
 
